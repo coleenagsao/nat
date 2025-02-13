@@ -2,6 +2,7 @@
  
 "use client";
 
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -17,8 +18,9 @@ import { SparklesText } from "@/components/magicui/sparkles-text";
 import { Lens } from "@/components/magicui/lens";
 import { BlurFade } from "@/components/magicui/blur-fade";
 
-
 export default function Home() {
+  const [image, setImage] = useState("https://plus.unsplash.com/premium_photo-1689518469262-6f9499412ef0?q=80&w=3845&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
   return (
    <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-black">
       <Meteors number={100} />
@@ -40,7 +42,7 @@ export default function Home() {
             ariaLabel="Zoom Area"
           >
             <img
-              src="https://plus.unsplash.com/premium_photo-1689518469262-6f9499412ef0?q=80&w=3845&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={image}
               alt="image placeholder"
               width={500}
               height={500}
@@ -60,8 +62,8 @@ export default function Home() {
             </CardDescription>
         </CardContent>
           <CardFooter className="space-x-4">
-          <Button>Yes</Button>
-          <Button variant="secondary">No :c</Button>
+          <Button onClick={() => setImage("https://i.pinimg.com/originals/8e/74/80/8e74802ee2a3df7d3db9cde1d760800c.gif")}>Yes</Button>
+          <Button variant="secondary" onClick={() => setImage("https://i.pinimg.com/originals/9c/c9/a0/9cc9a05e21b99ee8bc4cd5d62901dc99.gif")}>No :c</Button>
         </CardFooter>
         </Card>
       </BlurFade>
