@@ -12,6 +12,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Meteors } from "@/components/magicui/meteors";
+import { Spotlight } from '@/components/ui/spotlight';
 import { SparklesText } from "@/components/magicui/sparkles-text";
 import { Lens } from "@/components/magicui/lens";
 import { BlurFade } from "@/components/magicui/blur-fade";
@@ -20,7 +21,15 @@ import { BlurFade } from "@/components/magicui/blur-fade";
 export default function Home() {
   return (
    <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-black">
-      <Meteors number={30} />
+      <Meteors number={100} />
+       <Spotlight
+        className='bg-zinc-700 blur-2xl'
+        size={64}
+        springOptions={{
+          bounce: 0.3,
+          duration: 0.1,
+        }}
+      />
       <BlurFade delay={0.5} inView>
         <Card className="relative max-w-md shadow-none m-8">
           <CardHeader>
