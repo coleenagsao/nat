@@ -51,10 +51,9 @@ export default function Home() {
         </CardHeader>
         <CardContent>
             <CardTitle>
-              <div className="flex item-center text-2xl space-x-1 text-pink-500">
-                <p>Will you be my</p>
-                <SparklesText className="text-2xl" text="Valentine" sparklesCount={2} />
-                <p>?</p>
+              <div className="flex item-center text-2xl space-x-1 text-pink-500"> 
+                Will you be my Valentine?
+
               </div>
             </CardTitle>    
             <CardDescription className="py-2 text-pink-400">
