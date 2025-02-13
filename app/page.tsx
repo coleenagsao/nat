@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/card"
 import { Meteors } from "@/components/magicui/meteors";
 import { Spotlight } from '@/components/ui/spotlight';
-import { SparklesText } from "@/components/magicui/sparkles-text";
 import { Lens } from "@/components/magicui/lens";
 import { BlurFade } from "@/components/magicui/blur-fade";
 
